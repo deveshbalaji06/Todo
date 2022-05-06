@@ -1,0 +1,133 @@
+
+
+  *{
+      margin: 0;
+      padding: 0;
+  }
+  .container{
+     background: linear-gradient(to right bottom,#e1b382,#c89606);
+     width: 100%;
+     min-height: 100vh;
+     display:flex ;
+     justify-content: center;
+     align-items:center ;
+     
+
+  }
+  .app-wrapper{
+     background-color: #12343b;
+   min-width: 450px;
+   min-height: 500px;
+   padding: 30px;
+   box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  }
+
+  .header h1{
+     color: #fff;
+     text-align:center;
+
+  }
+
+  .button-add{
+   width: 70px;
+   padding: 15px 15px;
+   font-size: 20px;
+   border-radius: 10px;
+   border:0;
+   background-color: #f1af71;
+   cursor: pointer;
+
+  }
+  .task-input{
+   width: 300px;
+   padding: 15px 15px;
+   font-size: 20px;
+   color:rgb(184, 61, 176);
+   border-radius: 10px;
+   border:0;
+   background-color: #eae7e4;
+   
+
+  }
+
+ .list-item{
+     display: flex;
+     margin:20px 0;
+     border:1px solid #ccc;
+     border-radius: 10px;
+     padding: 10px;
+     max-height: 30px;
+
+
+ } 
+
+ .button-complete{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 28px;
+    border-radius: 50%;
+
+ }
+
+ .button-delete{
+   border: none;
+   outline: none;
+   cursor: pointer;
+   background-color: transparent;
+   font-size: 28px;
+   border-radius: 50%;
+ }
+
+ .button-edit{
+   border: none;
+   outline: none;
+   cursor: pointer;
+   background-color: transparent;
+   font-size: 28px;
+   border-radius: 50%;
+ }
+
+ .list{
+    width:220px;
+    background-color: #12343b;
+    border: none;
+    color:#ccc;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+
+ }
+
+ input:focus,
+ button:focus{
+    outline: none;
+ }
+ .task-input{
+
+   outline: none;
+   width:260px;
+   padding: 15px;
+   margin-right: 25px;
+   font-size:20px;
+   color: #ccc;
+   background-color: #000000;
+   border :1px solid #c89606;
+   border-radius: 10px;
+ 
+}
+.done{
+  color:green ;
+  margin-left: 45px;
+}
+.delete{
+   color: red;
+}
+.edit{
+  
+   color:blue
+
+}
