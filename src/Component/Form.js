@@ -1,7 +1,8 @@
 
 import React from 'react'
 import {v4 as uuidv4} from "uuid";
-export default  function Form({input,setInput,todos,setTodos}) {
+// import {db} from "./Firebase.js"
+export default  function Form({input,setInput,todos,setTodos,setData}) {
    const onInputChange=(event)=>{
     
     setInput(event.target.value);

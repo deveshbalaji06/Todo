@@ -2,64 +2,58 @@ import React from 'react'
 import DoneIcon from '@mui/icons-material/Done';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import {db} from "./Firebase"
+import { doc, deleteDoc } from "firebase/firestore";
+
+
+export default function TodoList({ todos, setTodos,setData }) {
 
 
 
-
-export default function TodoList({todos,setTodos}) {
-
-
-
-  function DeleteHandelChange({id})
-  {
-    setTodos(todos.filter((todo)=>todo.id!==id));
+  function DeleteHandelChange({ id }) {
+   
+   console.log(id);
+deleteDoc(doc(db,"notes",id)).then(()=>{
+   setData();
+});
+    
   }
 
-   function DoneHandelChange(event)
-   {
-       
-      
+  function DoneHandelChange(event) {
 
-   }
 
-   
-  
+
+  }
+
+
+
   return (
 
-    
+
 
     <div>
-      { 
-      
-     todos.map((todo)=>(
-    
-        <li className='list-item' key={todo.id} >
-        <input 
-        type="text"
-        value={todo.title}
-        className='list'
-        onChange={(event)=> event.preventDefault()
+      {
+
+        todos.map((todo, index) => (
          
-        }
-        
-        /> 
-         <DoneIcon className='done' onClick={()=>DoneHandelChange((todo))} />
-         <EditIcon className='edit'  />
-         <DeleteIcon className='delete'  onClick={()=>DeleteHandelChange(todo)}/>
+          <li className='list-item' key={index} >
+            <input
+              type="text"
+              value={todo.note}
+              className='list'
+              onChange={(event) => event.preventDefault()
 
-         
-    
-       <div> 
-     
-             
-    </div> 
+              }
+
+            />
+            <DoneIcon className='done' onClick={() => DoneHandelChange((todo))} />
+            <EditIcon className='edit' />
+            <DeleteIcon className='delete' onClick={() => DeleteHandelChange(todo)} />
+          </li>
 
 
-        </li>
-   
-       
 
-     ))
+        ))
 
 
       }
@@ -69,4 +63,3 @@ export default function TodoList({todos,setTodos}) {
   )
 }
 
- 
