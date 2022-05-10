@@ -119,15 +119,19 @@
    border-radius: 10px;
  
 }
-.done{
-  color:green ;
-  margin-left: 45px;
+.done {
+   color: green;
+   margin-left: 45px;
+   cursor: pointer;
 }
-.delete{
-   color: red;
-}
-.edit{
-  
-   color:blue
 
+.mark-done {
+   text-decoration: line-through;
 }
+
+.delete {
+   color: red;
+   cursor: pointer;
+}
+
+

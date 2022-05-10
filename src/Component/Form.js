@@ -1,16 +1,26 @@
 
 import React from 'react'
 import {v4 as uuidv4} from "uuid";
-// import {db} from "./Firebase.js"
+ import {db} from "./Firebase.js"
+import { doc, setDoc } from "firebase/firestore"; 
 export default  function Form({input,setInput,todos,setTodos,setData}) {
    const onInputChange=(event)=>{
-    
+     
     setInput(event.target.value);
-  
+      
    }
   const onFormSubmit =(event)=>{
+   
      event.preventDefault();
-     setTodos([...todos,{id:uuidv4(),title:input,completed:false}])
+    const info=event.target.text;
+    
+     setDoc(doc(db, "notes",uuidv4()), {
+        email:"deveshbalaji06@gmail.com",
+        note:info.value
+    });
+
+    
+    setData();
      setInput("");
   };
   
@@ -20,6 +30,7 @@ export default  function Form({input,setInput,todos,setTodos,setData}) {
     <input type='text' 
     placeholder='Enter the todo' 
     className='task-input'
+     name='text'
      value={input}
      required
      onChange={onInputChange}

@@ -13,6 +13,7 @@ function App() {
 
    const [input,setInput]=useState("");
    const [todos,setTodos]=useState([]);
+  
    const userCollectionRefs=collection(db,"notes");
    
 
@@ -41,7 +42,7 @@ function App() {
   
    },[]);
   
-   console.log(todos);
+  // console.log(todos);
 
   return (
     <div className="container">
@@ -54,12 +55,16 @@ function App() {
      todos={todos}
      setTodos={setTodos}
      setData={setData}
+     
     />
     
    </div> 
    <div>
-     <TodoList todos={todos} setTodos={setTodos}
+     <TodoList todos={todos} 
+     setTodos={setTodos}
       setData={setData}
+      setInput={setInput}
+      
      />
    </div>
    </div>
