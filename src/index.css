@@ -133,5 +133,35 @@
    color: red;
    cursor: pointer;
 }
+.social-button {
+   background-position: 25px 0px;
+   box-sizing: border-box;
+   cursor: pointer;
+   display: inline-block;
+   height: 50px;
+   line-height: 50px;
+   text-decoration: none;
+   text-transform: uppercase;
+   width: 100%;
+   border-radius: 5px;
+   margin: 10px auto;
+   padding-left: 20%;
+}
+
+#google-connect {
+   background: rgb(220, 74, 61) url('https://github.com/ksalokya/backSlash/blob/main/src/icons/google.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+}
+
+#google-connect span {
+   box-sizing: border-box;
+   cursor: pointer;
+   text-align: center;
+   color: #FFF;
+   margin-left: 24%;
+}
+
+#google-connect:hover {
+   transform: scale(1.1);
+}
 
 

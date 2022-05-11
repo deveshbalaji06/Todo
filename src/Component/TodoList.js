@@ -22,7 +22,7 @@ export default function TodoList({ todos, setTodos, setData }) {
  
      
     updateDoc(doc(db, "notes", todo.id),{
- isdone:true
+ isdone:!todo.isdone
 
     }).then(() => {
       setData();
@@ -59,7 +59,7 @@ export default function TodoList({ todos, setTodos, setData }) {
 
             />
             <DoneIcon className='done' onClick={() => DoneHandelChange((todo))} />
-           
+            <EditIcon className='edit'  />
             <DeleteIcon className='delete' onClick={() => DeleteHandelChange(todo)} />
           </li>
 
